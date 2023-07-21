@@ -40,10 +40,10 @@ def correlate(input1, input2):
     out_corr = spatial_correlation_sample(input1,
                                           input2,
                                           kernel_size=1,
-                                          patch_size=21,
+                                          patch_size=11,
                                           stride=1,
                                           padding=0,
-                                          dilation_patch=2)
+                                          dilation_patch=1)
     # collate dimensions 1 and 2 in order to be treated as a
     # regular 4D tensor
     b, ph, pw, h, w = out_corr.size()
